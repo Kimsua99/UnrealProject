@@ -1,0 +1,7 @@
+﻿  Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" UnrealProjectEditor Win64 Development -Project="F:\UnrealProject\UnrealProject\UnrealProject.uproject" -WaitMutex -FromMsBuild
+  Log file: C:\Users\cjcha\AppData\Local\UnrealBuildTool\Log.txt
+  Using 'git status' to determine working set for adaptive non-unity build (F:\UnrealProject).
+  Invalidating makefile for UnrealProjectEditor (UnrealProject.Build.cs modified)
+  Parsing headers for UnrealProjectEditor
+    Running Internal UnrealHeaderTool F:\UnrealProject\UnrealProject\UnrealProject.uproject F:\UnrealProject\UnrealProject\Intermediate\Build\Win64\UnrealProjectEditor\Development\UnrealProjectEditor.uhtmanifest -WarningsAsErrors -installed
+F:\VisualStudio\MSBuild\Microsoft\VC\v170\Microsoft.MakeFile.Targets(44,5): warning MSB5021: 빌드가 취소되었으므로 작업 실행 파일 "cmd" 및 자식 프로세스를 종료합니다.
