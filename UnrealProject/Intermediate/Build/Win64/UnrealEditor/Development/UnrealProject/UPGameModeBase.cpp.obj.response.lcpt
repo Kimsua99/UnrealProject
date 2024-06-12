@@ -271,6 +271,7 @@ F:\UnrealProject\UnrealProject\Source\UnrealProject\Game\UPGameModeBase.cpp
 /I Developer\AnimationDataController\Public
 /I F:\UnrealProject\UnrealProject\Intermediate\Build\Win64\UnrealEditor\Inc\UnrealProject\UHT
 /I F:\UnrealProject\UnrealProject\Source
+/I F:\UnrealProject\UnrealProject\Source\UnrealProject
 /I ..\Intermediate\Build\Win64\UnrealEditor\Inc\AugmentedReality\UHT
 /I Runtime\AugmentedReality\Public
 /I ..\Intermediate\Build\Win64\UnrealEditor\Inc\MRMesh\UHT

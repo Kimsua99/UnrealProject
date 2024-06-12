@@ -38,7 +38,7 @@ public: \
 
 #define FID_UnrealProject_UnrealProject_Source_UnrealProject_Game_UPGameModeBase_h_15_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API AUPGameModeBase(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+	NO_API AUPGameModeBase(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AUPGameModeBase) \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, AUPGameModeBase); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AUPGameModeBase); \
@@ -51,8 +51,6 @@ public: \
 
 
 #define FID_UnrealProject_UnrealProject_Source_UnrealProject_Game_UPGameModeBase_h_15_ENHANCED_CONSTRUCTORS \
-	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API AUPGameModeBase(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AUPGameModeBase(AUPGameModeBase&&); \
@@ -60,7 +58,7 @@ private: \
 public: \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, AUPGameModeBase); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AUPGameModeBase); \
-	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AUPGameModeBase) \
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AUPGameModeBase) \
 	NO_API virtual ~AUPGameModeBase();
 
 

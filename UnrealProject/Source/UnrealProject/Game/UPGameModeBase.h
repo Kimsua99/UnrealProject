@@ -13,5 +13,8 @@ UCLASS()
 class UNREALPROJECT_API AUPGameModeBase : public AGameModeBase
 {
 	GENERATED_BODY()
+
+public:
+	AUPGameModeBase();
 	
 };

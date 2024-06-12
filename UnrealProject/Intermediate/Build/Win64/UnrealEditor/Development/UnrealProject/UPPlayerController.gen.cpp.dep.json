@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "f:\\unrealproject\\unrealproject\\intermediate\\build\\win64\\unrealeditor\\inc\\unrealproject\\uht\\upplayercontroller.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "f:\\unrealproject\\unrealproject\\intermediate\\build\\win64\\unrealprojecteditor\\development\\engine\\sharedpch.engine.shadowerrors.h.pch",
+        "Includes": [
+            "f:\\unrealproject\\unrealproject\\intermediate\\build\\win64\\unrealeditor\\development\\unrealproject\\definitions.unrealproject.h",
+            "f:\\unrealproject\\unrealproject\\source\\unrealproject\\player\\upplayercontroller.h",
+            "f:\\unrealproject\\unrealproject\\intermediate\\build\\win64\\unrealeditor\\inc\\unrealproject\\uht\\upplayercontroller.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

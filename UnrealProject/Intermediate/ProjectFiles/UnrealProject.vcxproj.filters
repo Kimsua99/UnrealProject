@@ -54,6 +54,15 @@
     <ClInclude Include="..\..\Source\UnrealProject\UnrealProjectGameMode.h">
       <Filter>Source\UnrealProject</Filter>
     </ClInclude>
+    <Filter Include="Source\UnrealProject\Character">
+      <UniqueIdentifier>{CD7FE2EF-168B-301C-8C44-5A31DFDCB549}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\UnrealProject\Character\UPCharacterBase.cpp">
+      <Filter>Source\UnrealProject\Character</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\UnrealProject\Character\UPCharacterBase.h">
+      <Filter>Source\UnrealProject\Character</Filter>
+    </ClInclude>
     <Filter Include="Source\UnrealProject\Game">
       <UniqueIdentifier>{A18EF023-4403-316C-86B2-B2BBB71D2D44}</UniqueIdentifier>
     </Filter>
@@ -62,6 +71,15 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\UnrealProject\Game\UPGameModeBase.h">
       <Filter>Source\UnrealProject\Game</Filter>
+    </ClInclude>
+    <Filter Include="Source\UnrealProject\Player">
+      <UniqueIdentifier>{C60F66E7-B8AB-3E62-ACD5-29885F875023}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\UnrealProject\Player\UPPlayerController.cpp">
+      <Filter>Source\UnrealProject\Player</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\UnrealProject\Player\UPPlayerController.h">
+      <Filter>Source\UnrealProject\Player</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
