@@ -5,7 +5,16 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
-				"F:/UnrealProject/UnrealProject/Content/ThirdPerson/Maps/ThirdPersonMap.umap"
+				"F:/UnrealProject/UnrealProject/Content/ThirdPerson/Maps/ThirdPersonMap.umap",
+				"F:/UnrealProject/UnrealProject/Content/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.uasset",
+				"F:/UnrealProject/UnrealProject/Content/UnrealProject/Input/Actions/IA_Jump.uasset",
+				"F:/UnrealProject/UnrealProject/Content/UnrealProject/Input/Actions/IA_Look.uasset",
+				"F:/UnrealProject/UnrealProject/Content/UnrealProject/Input/Actions/IA_Move.uasset",
+				"F:/UnrealProject/UnrealProject/Content/UnrealProject/Input/IMC_Default.uasset",
+				"F:/UnrealProject/UnrealProject/Content/ThirdPerson/Input/IMC_Default.uasset",
+				"F:/UnrealProject/UnrealProject/Content/ThirdPerson/Input/Actions/IA_Move.uasset",
+				"F:/UnrealProject/UnrealProject/Content/ThirdPerson/Input/Actions/IA_Look.uasset",
+				"F:/UnrealProject/UnrealProject/Content/ThirdPerson/Input/Actions/IA_Jump.uasset"
 			]
 		}
 	]
