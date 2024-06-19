@@ -11,6 +11,7 @@
     <None Include="..\..\Source\UnrealProjectEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.gitattributes" />
     <None Include="..\..\.vsconfig" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
@@ -61,6 +62,18 @@
       <Filter>Source\UnrealProject\Character</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\UnrealProject\Character\UPCharacterBase.h">
+      <Filter>Source\UnrealProject\Character</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\UnrealProject\Character\UPCharacterControlData.cpp">
+      <Filter>Source\UnrealProject\Character</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\UnrealProject\Character\UPCharacterControlData.h">
+      <Filter>Source\UnrealProject\Character</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\UnrealProject\Character\UPCharacterPlayer.cpp">
+      <Filter>Source\UnrealProject\Character</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\UnrealProject\Character\UPCharacterPlayer.h">
       <Filter>Source\UnrealProject\Character</Filter>
     </ClInclude>
     <Filter Include="Source\UnrealProject\Game">
