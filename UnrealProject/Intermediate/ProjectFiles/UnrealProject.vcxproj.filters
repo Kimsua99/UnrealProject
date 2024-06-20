@@ -55,6 +55,15 @@
     <ClInclude Include="..\..\Source\UnrealProject\UnrealProjectGameMode.h">
       <Filter>Source\UnrealProject</Filter>
     </ClInclude>
+    <Filter Include="Source\UnrealProject\Animation">
+      <UniqueIdentifier>{AA6F2911-40BC-3A58-8B1B-FE089E376BA3}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\UnrealProject\Animation\UPAnimInstance.cpp">
+      <Filter>Source\UnrealProject\Animation</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\UnrealProject\Animation\UPAnimInstance.h">
+      <Filter>Source\UnrealProject\Animation</Filter>
+    </ClInclude>
     <Filter Include="Source\UnrealProject\Character">
       <UniqueIdentifier>{CD7FE2EF-168B-301C-8C44-5A31DFDCB549}</UniqueIdentifier>
     </Filter>

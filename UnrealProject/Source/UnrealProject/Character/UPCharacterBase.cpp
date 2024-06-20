@@ -34,11 +34,11 @@ AUPCharacterBase::AUPCharacterBase()
 	GetMesh()->SetCollisionProfileName(TEXT("CharacterMesh"));
 
 	//생성된 메쉬에 에셋 부착
-	static ConstructorHelpers::FObjectFinder<USkeletalMesh>CharacterMeshRef(TEXT("/Game/Characters/Mannequins/Meshes/SKM_Quinn_Simple.SKM_Quinn_Simple"));
+	static ConstructorHelpers::FObjectFinder<USkeletalMesh>CharacterMeshRef(TEXT("/Game/Animations/Idle.Idle"));
 	if (CharacterMeshRef.Object)
 		GetMesh()->SetSkeletalMesh(CharacterMeshRef.Object);
 
-	static ConstructorHelpers::FClassFinder<UAnimInstance>AnimInstanceClassRef(TEXT("/Game/Characters/Mannequins/Animations/ABP_Quinn.ABP_Quinn_C"));
+	static ConstructorHelpers::FClassFinder<UAnimInstance>AnimInstanceClassRef(TEXT("/Game/Animations/ABP_UPCharacter.ABP_UPCharacter_C"));
 	if (AnimInstanceClassRef.Class)
 		GetMesh()->SetAnimInstanceClass(AnimInstanceClassRef.Class);
 
