@@ -1,22 +1,27 @@
 ﻿  Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" UnrealProjectEditor Win64 Development -Project="F:\UnrealProject\UnrealProject\UnrealProject.uproject" -WaitMutex -FromMsBuild
   Log file: C:\Users\cjcha\AppData\Local\UnrealBuildTool\Log.txt
   Using 'git status' to determine working set for adaptive non-unity build (F:\UnrealProject).
+  Waiting for 'git status' command to complete
   Building UnrealProjectEditor...
   Using Visual Studio 2022 14.38.33133 toolchain (F:\VisualStudio\VC\Tools\MSVC\14.38.33130) and Windows 10.0.22621.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  [Adaptive Build] Excluded from UnrealProject unity file: UPCharacterBase.cpp, UPCharacterPlayer.cpp, UPComboActionData.cpp, UPGameModeBase.cpp
+  [Adaptive Build] Excluded from UnrealProject unity file: UPCharacterBase.cpp, UPComboActionData.cpp
   Determining max actions to execute in parallel (4 physical cores, 8 logical cores)
     Requested 4 process count multiplier: limiting max parallel actions to 16
-    Requested 1.5 GB free memory per action, 6.61 GB available: limiting max parallel actions to 4
-  Building 7 actions with 4 processes...
-  [1/7] Compile UPComboActionData.cpp
+    Requested 1.5 GB free memory per action, 7.55 GB available: limiting max parallel actions to 5
+  Building 10 actions with 5 processes...
+  [1/10] Compile UPCharacterBase.cpp
 c1xx : error C3859: PCH에 대한 가상 메모리를 만들지 못했습니다.
   c1xx: note: 시스템에서 1455 코드를 반환함: 이 작업을 완료하기 위한 페이징 파일이 너무 작습니다.
   c1xx: note: 자세한 내용은 https://aka.ms/pch-help를 참조하세요.
 c1xx : fatal error C1076: 컴파일러 한계: 내부 힙 한계에 도달했습니다.
-  [2/7] Compile UnrealProject.init.gen.cpp
-  [3/7] Compile UPComboActionData.gen.cpp
-  [4/7] Compile UPGameModeBase.cpp
-  [5/7] Link UnrealEditor-UnrealProject.dll cancelled
-  [6/7] Link UnrealEditor-UnrealProject.lib cancelled
-  [7/7] WriteMetadata UnrealProjectEditor.target cancelled
-F:\VisualStudio\MSBuild\Microsoft\VC\v170\Microsoft.MakeFile.Targets(44,5): error MSB3073: "F:\UE_5.1\Engine\Build\BatchFiles\Build.bat UnrealProjectEditor Win64 Development -Project="F:\UnrealProject\UnrealProject\UnrealProject.uproject" -WaitMutex -FromMsBuild" 명령이 종료되었습니다(코드: 6).
+  [2/10] Compile UPCharacterBase.gen.cpp
+c1xx : error C3859: PCH에 대한 가상 메모리를 만들지 못했습니다.
+  c1xx: note: 시스템에서 1455 코드를 반환함: 이 작업을 완료하기 위한 페이징 파일이 너무 작습니다.
+  c1xx: note: 자세한 내용은 https://aka.ms/pch-help를 참조하세요.
+c1xx : fatal error C1076: 컴파일러 한계: 내부 힙 한계에 도달했습니다.
+  [3/10] Compile UnrealProject.init.gen.cpp
+c1xx : error C3859: PCH에 대한 가상 메모리를 만들지 못했습니다.
+  c1xx: note: 시스템에서 1455 코드를 반환함: 이 작업을 완료하기 위한 페이징 파일이 너무 작습니다.
+  c1xx: note: 자세한 내용은 https://aka.ms/pch-help를 참조하세요.
+c1xx : fatal error C1076: 컴파일러 한계: 내부 힙 한계에 도달했습니다.
+F:\VisualStudio\MSBuild\Microsoft\VC\v170\Microsoft.MakeFile.Targets(44,5): warning MSB5021: 빌드가 취소되었으므로 작업 실행 파일 "cmd" 및 자식 프로세스를 종료합니다.

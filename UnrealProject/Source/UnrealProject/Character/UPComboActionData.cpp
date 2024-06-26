@@ -3,3 +3,6 @@
 
 #include "Character/UPComboActionData.h"
 
+UUPComboActionData::UUPComboActionData()
+{
+}
