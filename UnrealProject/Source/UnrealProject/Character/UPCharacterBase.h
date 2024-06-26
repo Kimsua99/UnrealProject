@@ -14,4 +14,12 @@ class UNREALPROJECT_API AUPCharacterBase : public ACharacter
 public:
 	// Sets default values for this character's properties
 	AUPCharacterBase();
+
+//Combo Action Section
+protected:
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animation)
+	TObjectPtr<class UAnimMontage> ComboActionMontage;
+
+	void PressComboCommand();
 };

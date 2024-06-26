@@ -85,6 +85,12 @@
     <ClInclude Include="..\..\Source\UnrealProject\Character\UPCharacterPlayer.h">
       <Filter>Source\UnrealProject\Character</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\UnrealProject\Character\UPComboActionData.cpp">
+      <Filter>Source\UnrealProject\Character</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\UnrealProject\Character\UPComboActionData.h">
+      <Filter>Source\UnrealProject\Character</Filter>
+    </ClInclude>
     <Filter Include="Source\UnrealProject\Game">
       <UniqueIdentifier>{A18EF023-4403-316C-86B2-B2BBB71D2D44}</UniqueIdentifier>
     </Filter>

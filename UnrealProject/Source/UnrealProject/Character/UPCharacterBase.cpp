@@ -4,6 +4,7 @@
 #include "Character/UPCharacterBase.h"
 #include "Components/CapsuleComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
+#include "Animation/AnimMontage.h"
 
 // Sets default values
 AUPCharacterBase::AUPCharacterBase()
@@ -42,4 +43,10 @@ AUPCharacterBase::AUPCharacterBase()
 	if (AnimInstanceClassRef.Class)
 		GetMesh()->SetAnimInstanceClass(AnimInstanceClassRef.Class);
 
+}
+
+void AUPCharacterBase::PressComboCommand()
+{
+	UAnimInstance* AnimInstance = GetMesh()->GetAnimInstance();
+	AnimInstance->Montage_Play(ComboActionMontage);//기본 재생 속도는 1.0
 }

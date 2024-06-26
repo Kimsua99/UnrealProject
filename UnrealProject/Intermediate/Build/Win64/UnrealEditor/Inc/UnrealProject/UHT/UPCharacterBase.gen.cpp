@@ -10,6 +10,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeUPCharacterBase() {}
 // Cross Module References
 	ENGINE_API UClass* Z_Construct_UClass_ACharacter();
+	ENGINE_API UClass* Z_Construct_UClass_UAnimMontage_NoRegister();
 	UNREALPROJECT_API UClass* Z_Construct_UClass_AUPCharacterBase();
 	UNREALPROJECT_API UClass* Z_Construct_UClass_AUPCharacterBase_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_UnrealProject();
@@ -28,6 +29,11 @@ void EmptyLinkFunctionForGeneratedCodeUPCharacterBase() {}
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_ComboActionMontage_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPtrPropertyParams NewProp_ComboActionMontage;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
 	};
@@ -42,6 +48,16 @@ void EmptyLinkFunctionForGeneratedCodeUPCharacterBase() {}
 		{ "ModuleRelativePath", "Character/UPCharacterBase.h" },
 	};
 #endif
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AUPCharacterBase_Statics::NewProp_ComboActionMontage_MetaData[] = {
+		{ "Category", "Animation" },
+		{ "ModuleRelativePath", "Character/UPCharacterBase.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPtrPropertyParams Z_Construct_UClass_AUPCharacterBase_Statics::NewProp_ComboActionMontage = { "ComboActionMontage", nullptr, (EPropertyFlags)0x0024080000000005, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(AUPCharacterBase, ComboActionMontage), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AUPCharacterBase_Statics::NewProp_ComboActionMontage_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AUPCharacterBase_Statics::NewProp_ComboActionMontage_MetaData)) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AUPCharacterBase_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AUPCharacterBase_Statics::NewProp_ComboActionMontage,
+	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AUPCharacterBase_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AUPCharacterBase>::IsAbstract,
 	};
@@ -51,11 +67,11 @@ void EmptyLinkFunctionForGeneratedCodeUPCharacterBase() {}
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
 		nullptr,
-		nullptr,
+		Z_Construct_UClass_AUPCharacterBase_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
 		0,
-		0,
+		UE_ARRAY_COUNT(Z_Construct_UClass_AUPCharacterBase_Statics::PropPointers),
 		0,
 		0x009000A4u,
 		METADATA_PARAMS(Z_Construct_UClass_AUPCharacterBase_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_AUPCharacterBase_Statics::Class_MetaDataParams))
@@ -79,9 +95,9 @@ void EmptyLinkFunctionForGeneratedCodeUPCharacterBase() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UnrealProject_UnrealProject_Source_UnrealProject_Character_UPCharacterBase_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AUPCharacterBase, AUPCharacterBase::StaticClass, TEXT("AUPCharacterBase"), &Z_Registration_Info_UClass_AUPCharacterBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AUPCharacterBase), 2269805342U) },
+		{ Z_Construct_UClass_AUPCharacterBase, AUPCharacterBase::StaticClass, TEXT("AUPCharacterBase"), &Z_Registration_Info_UClass_AUPCharacterBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AUPCharacterBase), 3555736862U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UnrealProject_UnrealProject_Source_UnrealProject_Character_UPCharacterBase_h_600959844(TEXT("/Script/UnrealProject"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UnrealProject_UnrealProject_Source_UnrealProject_Character_UPCharacterBase_h_3756492411(TEXT("/Script/UnrealProject"),
 		Z_CompiledInDeferFile_FID_UnrealProject_UnrealProject_Source_UnrealProject_Character_UPCharacterBase_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UnrealProject_UnrealProject_Source_UnrealProject_Character_UPCharacterBase_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

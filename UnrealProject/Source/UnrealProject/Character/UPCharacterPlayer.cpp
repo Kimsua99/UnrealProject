@@ -19,6 +19,7 @@ AUPCharacterPlayer::AUPCharacterPlayer()
 	FollowCamera->SetupAttachment(CameraBoom, USpringArmComponent::SocketName); //카메라 지지대에 부착하는데, 소켓이라는 특별한 이름 지시자 지정하면 자동으로 끝에 달라붙음
 	FollowCamera->bUsePawnControlRotation = false;
 
+	//입력 액션에 대해 해당되는 에셋을 로딩
 	static ConstructorHelpers::FObjectFinder<UInputMappingContext> MappingContext(TEXT("/Script/EnhancedInput.InputMappingContext'/Game/UnrealProject/Input/IMC_Default.IMC_Default'"));
 	if (MappingContext.Object) {
 		DefaultMappingContext = MappingContext.Object;
@@ -36,6 +37,11 @@ AUPCharacterPlayer::AUPCharacterPlayer()
 	static ConstructorHelpers::FObjectFinder<UInputAction> LOOKACTION(TEXT("/Script/EnhancedInput.InputAction'/Game/UnrealProject/Input/Actions/IA_Look.IA_Look'"));
 	if (LOOKACTION.Object) {
 		LookAction = LOOKACTION.Object;
+	}
+
+	static ConstructorHelpers::FObjectFinder<UInputAction> InputActionAttackRef(TEXT("/Script/EnhancedInput.InputAction'/Game/UnrealProject/Input/Actions/IA_Attack.IA_Attack'"));
+	if (InputActionAttackRef.Object) {
+		AttackAction = InputActionAttackRef.Object;
 	}
 }
 
@@ -65,6 +71,7 @@ void AUPCharacterPlayer::SetupPlayerInputComponent(class UInputComponent* Player
 	EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Completed, this, &ACharacter::StopJumping);
 	EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, &AUPCharacterPlayer::Move);
 	EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &AUPCharacterPlayer::Look);
+	EnhancedInputComponent->BindAction(AttackAction, ETriggerEvent::Triggered, this, &AUPCharacterPlayer::Attack);
 }
 
 //FInputActionValue에서 x,y값을 가져온 후에 이것들을 무브먼트 컴포넌트와 연결하여 실질적으로 이동이나 회전을 설정함으로써 SpringArm이 컨트롤러를 바라보게 설정
@@ -88,4 +95,9 @@ void AUPCharacterPlayer::Look(const FInputActionValue& Value)
 
 	AddControllerYawInput(LookAxisVector.X);
 	AddControllerPitchInput(LookAxisVector.Y);
+}
+
+void AUPCharacterPlayer::Attack()
+{
+	PressComboCommand();
 }

@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "f:\\unrealproject\\unrealproject\\intermediate\\build\\win64\\unrealeditor\\inc\\unrealproject\\uht\\upcomboactiondata.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "f:\\unrealproject\\unrealproject\\intermediate\\build\\win64\\unrealprojecteditor\\development\\engine\\sharedpch.engine.shadowerrors.h.pch",
+        "Includes": [
+            "f:\\unrealproject\\unrealproject\\intermediate\\build\\win64\\unrealeditor\\development\\unrealproject\\definitions.unrealproject.h",
+            "f:\\unrealproject\\unrealproject\\source\\unrealproject\\character\\upcomboactiondata.h",
+            "f:\\unrealproject\\unrealproject\\intermediate\\build\\win64\\unrealeditor\\inc\\unrealproject\\uht\\upcomboactiondata.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

@@ -13,12 +13,12 @@ AUPGameModeBase::AUPGameModeBase()
 	//	DefaultPawnClass = ThirdPersonClassRef.Class;
 	//}
 
-	static ConstructorHelpers::FClassFinder<APawn>DefaultPawnCalssRef(TEXT("/Script/UnrealProject.UPCharacterPlayer"));
+	static ConstructorHelpers::FClassFinder<APawn>DefaultPawnCalssRef(TEXT("/Game/UnrealProject/Blueprint/BP_UPCharacterPlayer.BP_UPCharacterPlayer_C"));
 
 	if (DefaultPawnCalssRef.Class)
 	{
 		DefaultPawnClass = DefaultPawnCalssRef.Class;
-	}
+	} 
 	static ConstructorHelpers::FClassFinder<APlayerController>PlayerControllerClassRef(TEXT("/Script/UnrealProject.UPPlayerController"));
 
 	if (PlayerControllerClassRef.Class)
