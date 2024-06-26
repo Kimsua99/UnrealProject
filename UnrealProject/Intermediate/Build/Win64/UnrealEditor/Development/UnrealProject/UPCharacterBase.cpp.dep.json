@@ -36,7 +36,9 @@
             "f:\\ue_5.1\\engine\\source\\runtime\\engine\\public\\charactermovementcomponentasync.h",
             "f:\\ue_5.1\\engine\\source\\runtime\\engine\\public\\engine\\overlapinfo.h",
             "f:\\ue_5.1\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\charactermovementcomponentasync.generated.h",
-            "f:\\ue_5.1\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\charactermovementcomponent.generated.h"
+            "f:\\ue_5.1\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\charactermovementcomponent.generated.h",
+            "f:\\unrealproject\\unrealproject\\source\\unrealproject\\character\\upcomboactiondata.h",
+            "f:\\unrealproject\\unrealproject\\intermediate\\build\\win64\\unrealeditor\\inc\\unrealproject\\uht\\upcomboactiondata.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []
