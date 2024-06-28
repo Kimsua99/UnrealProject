@@ -4,10 +4,11 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "Interface/UPAnimationAttackInterface.h"
 #include "UPCharacterBase.generated.h"
 
 UCLASS()
-class UNREALPROJECT_API AUPCharacterBase : public ACharacter
+class UNREALPROJECT_API AUPCharacterBase : public ACharacter, public IUPAnimationAttackInterface
 {
 	GENERATED_BODY()
 
@@ -36,5 +37,9 @@ protected:
 	int32 CurrentCombo = 0;
 	FTimerHandle ComboTimerHandle;
 	bool HasNextComboCommand = false;
+
+	//Attack Hit Section
+protected:
+	virtual void AttackHitCheck() override;//인터페이스에 구현한 가상 함수 오버라이드
 
 };

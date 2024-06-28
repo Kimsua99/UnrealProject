@@ -1,0 +1,17 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "f:\\unrealproject\\unrealproject\\source\\unrealproject\\animation\\animnotify_attackhitcheck.cpp",
+        "ProvidedModule": "",
+        "PCH": "f:\\unrealproject\\unrealproject\\intermediate\\build\\win64\\unrealprojecteditor\\development\\engine\\sharedpch.engine.shadowerrors.h.pch",
+        "Includes": [
+            "f:\\unrealproject\\unrealproject\\intermediate\\build\\win64\\unrealeditor\\development\\unrealproject\\definitions.unrealproject.h",
+            "f:\\unrealproject\\unrealproject\\source\\unrealproject\\animation\\animnotify_attackhitcheck.h",
+            "f:\\unrealproject\\unrealproject\\intermediate\\build\\win64\\unrealeditor\\inc\\unrealproject\\uht\\animnotify_attackhitcheck.generated.h",
+            "f:\\unrealproject\\unrealproject\\source\\unrealproject\\interface\\upanimationattackinterface.h",
+            "f:\\unrealproject\\unrealproject\\intermediate\\build\\win64\\unrealeditor\\inc\\unrealproject\\uht\\upanimationattackinterface.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

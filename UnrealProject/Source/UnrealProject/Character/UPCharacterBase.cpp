@@ -6,6 +6,7 @@
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Animation/AnimMontage.h"
 #include "UPComboActionData.h"
+#include "Physics/UPCollision.h"
 
 // Sets default values
 AUPCharacterBase::AUPCharacterBase()
@@ -134,4 +135,38 @@ void AUPCharacterBase::ComboCheck()//타이머 발동 시에 입력이 들어왔는지 아닌지 �
 		//입력값 초기화
 		HasNextComboCommand = false;
 	}
+}
+
+void AUPCharacterBase::AttackHitCheck()	//트레이스 채널 활용해 물체 충돌하는지 검사하는 로직
+{	
+	FHitResult OutHitResult;//결과 값을 받아올 구조체
+
+	FCollisionQueryParams Params(SCENE_QUERY_STAT(Attack), false, this);//파라미터. (콜리전 분석 시 식별자 정보, 복잡한 충돌체도 감지 여부, 무시할 액터)
+
+	const float AttackRange = 40.0f;//Start ~ End 길이
+	const float AttackRadius = 50.0f;//구체의 반지름
+	const float AttackDamage = 30.0f;
+
+	//시작지점의 경우 현재 액터 위치와 액터 시선 방향에 캡슐 컴포넌트의 반지름 값을 곱해 더해서 액터의 위치에서 시작되는 것이 아니라 정면에 있는 캡슐의 위치에서부터 시작되도록 설정
+	const FVector Start = GetActorLocation() + GetActorForwardVector() * GetCapsuleComponent()->GetScaledCapsuleRadius();
+	const FVector End = Start + GetActorForwardVector() * AttackRange;
+
+	bool HitDetected = GetWorld()->SweepSingleByChannel(OutHitResult, Start, End, FQuat::Identity, CCHANNEL_UPACTION,
+														FCollisionShape::MakeSphere(AttackRadius), Params);
+	//(결과값 구조체, 투사 시작지점, 투사 끝지점, 회전 사용 x, 전처리 설정한 트레이스 채널명, 구체 영역 지정(구체 반지름), 파라미터)
+	//충돌 감지되면 true 반환
+
+	if (HitDetected)
+	{
+
+	}
+
+	//충돌 감지 위한 영역을 씬에 표시 -> 조건부 컴파일
+#if ENABLE_DRAW_DEBUG
+	FVector CapsuleOrigin = Start + (End - Start) * 0.5f;
+	float CapsuleHalfHeight = AttackRange * 0.5f;
+	FColor DrawColor = HitDetected ? FColor::Green : FColor::Red;
+
+	DrawDebugCapsule(GetWorld(), CapsuleOrigin, CapsuleHalfHeight, AttackRadius, FRotationMatrix::MakeFromZ(GetActorForwardVector()).ToQuat(), DrawColor, false, 5.0f);//z 방향으로 눕힘. 계속 그리지 않고 5초 동안 유지
+#endif
 }

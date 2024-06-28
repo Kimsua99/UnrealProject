@@ -31,6 +31,18 @@
     <None Include="..\..\Config\DefaultInput.ini">
       <Filter>Config</Filter>
     </None>
+    <Filter Include="Platforms">
+      <UniqueIdentifier>{ED49A36C-4FD5-37E5-A2AC-E11BEF4F21CF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platforms\HoloLens">
+      <UniqueIdentifier>{28125F47-4973-377C-9D77-EBC3C72EC856}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platforms\HoloLens\Config">
+      <UniqueIdentifier>{D3BF39CB-FA64-39E2-A327-B5021BA69773}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Platforms\HoloLens\Config\HoloLensEngine.ini">
+      <Filter>Platforms\HoloLens\Config</Filter>
+    </None>
     <Filter Include="Source\UnrealProject">
       <UniqueIdentifier>{553CD66E-891B-3E4A-ABB2-377884EC38B6}</UniqueIdentifier>
     </Filter>
@@ -58,6 +70,12 @@
     <Filter Include="Source\UnrealProject\Animation">
       <UniqueIdentifier>{AA6F2911-40BC-3A58-8B1B-FE089E376BA3}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\UnrealProject\Animation\AnimNotify_AttackHitCheck.cpp">
+      <Filter>Source\UnrealProject\Animation</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\UnrealProject\Animation\AnimNotify_AttackHitCheck.h">
+      <Filter>Source\UnrealProject\Animation</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\UnrealProject\Animation\UPAnimInstance.cpp">
       <Filter>Source\UnrealProject\Animation</Filter>
     </ClCompile>
@@ -77,6 +95,12 @@
       <Filter>Source\UnrealProject\Character</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\UnrealProject\Character\UPCharacterControlData.h">
+      <Filter>Source\UnrealProject\Character</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\UnrealProject\Character\UPCharacterEnemy.cpp">
+      <Filter>Source\UnrealProject\Character</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\UnrealProject\Character\UPCharacterEnemy.h">
       <Filter>Source\UnrealProject\Character</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\UnrealProject\Character\UPCharacterPlayer.cpp">
@@ -99,6 +123,21 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\UnrealProject\Game\UPGameModeBase.h">
       <Filter>Source\UnrealProject\Game</Filter>
+    </ClInclude>
+    <Filter Include="Source\UnrealProject\Interface">
+      <UniqueIdentifier>{24F128FB-8207-3074-A023-8C637AA5A62E}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\UnrealProject\Interface\UPAnimationAttackInterface.cpp">
+      <Filter>Source\UnrealProject\Interface</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\UnrealProject\Interface\UPAnimationAttackInterface.h">
+      <Filter>Source\UnrealProject\Interface</Filter>
+    </ClInclude>
+    <Filter Include="Source\UnrealProject\Physics">
+      <UniqueIdentifier>{C791422C-9148-3426-A9DD-184FF612249A}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\UnrealProject\Physics\UPCollision.h">
+      <Filter>Source\UnrealProject\Physics</Filter>
     </ClInclude>
     <Filter Include="Source\UnrealProject\Player">
       <UniqueIdentifier>{C60F66E7-B8AB-3E62-ACD5-29885F875023}</UniqueIdentifier>

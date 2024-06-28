@@ -13,6 +13,7 @@ void EmptyLinkFunctionForGeneratedCodeUPCharacterBase() {}
 	ENGINE_API UClass* Z_Construct_UClass_UAnimMontage_NoRegister();
 	UNREALPROJECT_API UClass* Z_Construct_UClass_AUPCharacterBase();
 	UNREALPROJECT_API UClass* Z_Construct_UClass_AUPCharacterBase_NoRegister();
+	UNREALPROJECT_API UClass* Z_Construct_UClass_UUPAnimationAttackInterface_NoRegister();
 	UNREALPROJECT_API UClass* Z_Construct_UClass_UUPComboActionData_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_UnrealProject();
 // End Cross Module References
@@ -39,6 +40,7 @@ void EmptyLinkFunctionForGeneratedCodeUPCharacterBase() {}
 #endif
 		static const UECodeGen_Private::FObjectPtrPropertyParams NewProp_ComboActionData;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+		static const UECodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
 	};
@@ -74,6 +76,9 @@ void EmptyLinkFunctionForGeneratedCodeUPCharacterBase() {}
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AUPCharacterBase_Statics::NewProp_ComboActionMontage,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AUPCharacterBase_Statics::NewProp_ComboActionData,
 	};
+		const UECodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_AUPCharacterBase_Statics::InterfaceParams[] = {
+			{ Z_Construct_UClass_UUPAnimationAttackInterface_NoRegister, (int32)VTABLE_OFFSET(AUPCharacterBase, IUPAnimationAttackInterface), false },  // 3338843160
+		};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AUPCharacterBase_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AUPCharacterBase>::IsAbstract,
 	};
@@ -84,11 +89,11 @@ void EmptyLinkFunctionForGeneratedCodeUPCharacterBase() {}
 		DependentSingletons,
 		nullptr,
 		Z_Construct_UClass_AUPCharacterBase_Statics::PropPointers,
-		nullptr,
+		InterfaceParams,
 		UE_ARRAY_COUNT(DependentSingletons),
 		0,
 		UE_ARRAY_COUNT(Z_Construct_UClass_AUPCharacterBase_Statics::PropPointers),
-		0,
+		UE_ARRAY_COUNT(InterfaceParams),
 		0x009000A4u,
 		METADATA_PARAMS(Z_Construct_UClass_AUPCharacterBase_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_AUPCharacterBase_Statics::Class_MetaDataParams))
 	};
@@ -111,9 +116,9 @@ void EmptyLinkFunctionForGeneratedCodeUPCharacterBase() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UnrealProject_UnrealProject_Source_UnrealProject_Character_UPCharacterBase_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AUPCharacterBase, AUPCharacterBase::StaticClass, TEXT("AUPCharacterBase"), &Z_Registration_Info_UClass_AUPCharacterBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AUPCharacterBase), 2659130841U) },
+		{ Z_Construct_UClass_AUPCharacterBase, AUPCharacterBase::StaticClass, TEXT("AUPCharacterBase"), &Z_Registration_Info_UClass_AUPCharacterBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AUPCharacterBase), 2075436334U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UnrealProject_UnrealProject_Source_UnrealProject_Character_UPCharacterBase_h_4183156694(TEXT("/Script/UnrealProject"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UnrealProject_UnrealProject_Source_UnrealProject_Character_UPCharacterBase_h_2015425262(TEXT("/Script/UnrealProject"),
 		Z_CompiledInDeferFile_FID_UnrealProject_UnrealProject_Source_UnrealProject_Character_UPCharacterBase_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UnrealProject_UnrealProject_Source_UnrealProject_Character_UPCharacterBase_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
