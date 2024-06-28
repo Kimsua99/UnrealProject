@@ -13,5 +13,11 @@ UCLASS()
 class UNREALPROJECT_API AUPCharacterEnemy : public AUPCharacterBase
 {
 	GENERATED_BODY()
+
+public:
+	AUPCharacterEnemy();
+
+protected:
+	void SetDead() override;
 	
 };

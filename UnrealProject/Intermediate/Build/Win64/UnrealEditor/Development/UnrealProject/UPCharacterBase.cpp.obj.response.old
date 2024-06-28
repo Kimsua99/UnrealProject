@@ -288,7 +288,10 @@ F:\UnrealProject\UnrealProject\Source\UnrealProject\Character\UPCharacterBase.cp
 /external:I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared"
 /external:I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um"
 /external:I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\winrt"
-/FI"F:\UnrealProject\UnrealProject\Intermediate\Build\Win64\UnrealEditor\Development\UnrealProject\Definitions.h"
+/FI"F:\UnrealProject\UnrealProject\Intermediate\Build\Win64\UnrealProjectEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
+/FI"F:\UnrealProject\UnrealProject\Intermediate\Build\Win64\UnrealEditor\Development\UnrealProject\Definitions.UnrealProject.h"
+/Yu"F:\UnrealProject\UnrealProject\Intermediate\Build\Win64\UnrealProjectEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
+/Fp"F:\UnrealProject\UnrealProject\Intermediate\Build\Win64\UnrealProjectEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
 /Fo"F:\UnrealProject\UnrealProject\Intermediate\Build\Win64\UnrealEditor\Development\UnrealProject\UPCharacterBase.cpp.obj"
 /sourceDependencies F:\UnrealProject\UnrealProject\Intermediate\Build\Win64\UnrealEditor\Development\UnrealProject\UPCharacterBase.cpp.dep.json
 /Zc:inline

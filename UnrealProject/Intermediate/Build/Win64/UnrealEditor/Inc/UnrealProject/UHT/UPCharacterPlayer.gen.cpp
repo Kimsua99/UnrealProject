@@ -190,9 +190,9 @@ void EmptyLinkFunctionForGeneratedCodeUPCharacterPlayer() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UnrealProject_UnrealProject_Source_UnrealProject_Character_UPCharacterPlayer_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AUPCharacterPlayer, AUPCharacterPlayer::StaticClass, TEXT("AUPCharacterPlayer"), &Z_Registration_Info_UClass_AUPCharacterPlayer, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AUPCharacterPlayer), 2361107063U) },
+		{ Z_Construct_UClass_AUPCharacterPlayer, AUPCharacterPlayer::StaticClass, TEXT("AUPCharacterPlayer"), &Z_Registration_Info_UClass_AUPCharacterPlayer, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AUPCharacterPlayer), 3999500038U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UnrealProject_UnrealProject_Source_UnrealProject_Character_UPCharacterPlayer_h_1499668990(TEXT("/Script/UnrealProject"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UnrealProject_UnrealProject_Source_UnrealProject_Character_UPCharacterPlayer_h_2846218699(TEXT("/Script/UnrealProject"),
 		Z_CompiledInDeferFile_FID_UnrealProject_UnrealProject_Source_UnrealProject_Character_UPCharacterPlayer_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UnrealProject_UnrealProject_Source_UnrealProject_Character_UPCharacterPlayer_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

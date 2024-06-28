@@ -1,0 +1,25 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "f:\\unrealproject\\unrealproject\\source\\unrealproject\\character\\upcharacterenemy.cpp",
+        "ProvidedModule": "",
+        "PCH": "f:\\unrealproject\\unrealproject\\intermediate\\build\\win64\\unrealprojecteditor\\development\\engine\\sharedpch.engine.shadowerrors.h.pch",
+        "Includes": [
+            "f:\\unrealproject\\unrealproject\\intermediate\\build\\win64\\unrealeditor\\development\\unrealproject\\definitions.unrealproject.h",
+            "f:\\unrealproject\\unrealproject\\source\\unrealproject\\character\\upcharacterenemy.h",
+            "f:\\unrealproject\\unrealproject\\source\\unrealproject\\character\\upcharacterbase.h",
+            "f:\\ue_5.1\\engine\\source\\runtime\\engine\\classes\\gameframework\\character.h",
+            "f:\\ue_5.1\\engine\\source\\runtime\\engine\\classes\\gameframework\\charactermovementreplication.h",
+            "f:\\ue_5.1\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\charactermovementreplication.generated.h",
+            "f:\\ue_5.1\\engine\\source\\runtime\\engine\\classes\\gameframework\\rootmotionsource.h",
+            "f:\\ue_5.1\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\rootmotionsource.generated.h",
+            "f:\\ue_5.1\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\character.generated.h",
+            "f:\\unrealproject\\unrealproject\\source\\unrealproject\\interface\\upanimationattackinterface.h",
+            "f:\\unrealproject\\unrealproject\\intermediate\\build\\win64\\unrealeditor\\inc\\unrealproject\\uht\\upanimationattackinterface.generated.h",
+            "f:\\unrealproject\\unrealproject\\intermediate\\build\\win64\\unrealeditor\\inc\\unrealproject\\uht\\upcharacterbase.generated.h",
+            "f:\\unrealproject\\unrealproject\\intermediate\\build\\win64\\unrealeditor\\inc\\unrealproject\\uht\\upcharacterenemy.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

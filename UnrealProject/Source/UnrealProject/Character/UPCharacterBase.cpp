@@ -7,6 +7,7 @@
 #include "Animation/AnimMontage.h"
 #include "UPComboActionData.h"
 #include "Physics/UPCollision.h"
+#include "Engine/DamageEvents.h"
 
 // Sets default values
 AUPCharacterBase::AUPCharacterBase()
@@ -19,7 +20,7 @@ AUPCharacterBase::AUPCharacterBase()
 
 	//루트 컴포넌트인 캡슐에 관련된 변수들
 	GetCapsuleComponent()->InitCapsuleSize(42.f, 96.0f);
-	GetCapsuleComponent()->SetCollisionProfileName(TEXT("Pawn"));
+	GetCapsuleComponent()->SetCollisionProfileName(TEXT("UPCapsule"));
 
 	//움직임 해당하는 무브 컴포넌트 관련 변수들
 	GetCharacterMovement()->bOrientRotationToMovement = true;
@@ -34,7 +35,7 @@ AUPCharacterBase::AUPCharacterBase()
 	//Mesh 관련 설정
 	GetMesh()->SetRelativeLocationAndRotation(FVector(0.0f, 0.0f, -100.0f), FRotator(0.0f, -90.0f, 0.0f));
 	GetMesh()->SetAnimationMode(EAnimationMode::AnimationBlueprint);
-	GetMesh()->SetCollisionProfileName(TEXT("CharacterMesh"));
+	GetMesh()->SetCollisionProfileName(TEXT("NoCollision"));
 
 	//생성된 메쉬에 에셋 부착
 	static ConstructorHelpers::FObjectFinder<USkeletalMesh>CharacterMeshRef(TEXT("/Game/Animations/Idle.Idle"));
@@ -44,6 +45,18 @@ AUPCharacterBase::AUPCharacterBase()
 	static ConstructorHelpers::FClassFinder<UAnimInstance>AnimInstanceClassRef(TEXT("/Game/Animations/ABP_UPCharacter.ABP_UPCharacter_C"));
 	if (AnimInstanceClassRef.Class)
 		GetMesh()->SetAnimInstanceClass(AnimInstanceClassRef.Class);
+
+	static ConstructorHelpers::FObjectFinder<UAnimMontage>ComboActionMontageRef(TEXT("/Script/Engine.AnimMontage'/Game/Animations/AM_ComboAttack.AM_ComboAttack'"));
+	if (ComboActionMontageRef.Object)
+		ComboActionMontage = ComboActionMontageRef.Object;
+
+	static ConstructorHelpers::FObjectFinder<UUPComboActionData>ComboActionDataRef(TEXT("/Script/UnrealProject.UPComboActionData'/Game/UnrealProject/CharacterAction/UPA_ComboAttack.UPA_ComboAttack'"));
+	if (ComboActionDataRef.Object)
+		ComboActionData = ComboActionDataRef.Object;
+
+	static ConstructorHelpers::FObjectFinder<UAnimMontage>DeadMontageRef(TEXT("/Script/Engine.AnimMontage'/Game/Animations/EnemyAnim/AM_EnemyDead.AM_EnemyDead'"));
+	if (DeadMontageRef.Object)
+		DeadMontage = DeadMontageRef.Object;
 
 }
 
@@ -155,10 +168,10 @@ void AUPCharacterBase::AttackHitCheck()	//트레이스 채널 활용해 물체 충돌하는지 �
 														FCollisionShape::MakeSphere(AttackRadius), Params);
 	//(결과값 구조체, 투사 시작지점, 투사 끝지점, 회전 사용 x, 전처리 설정한 트레이스 채널명, 구체 영역 지정(구체 반지름), 파라미터)
 	//충돌 감지되면 true 반환
-
 	if (HitDetected)
 	{
-
+		FDamageEvent DamageEvent;
+		OutHitResult.GetActor()->TakeDamage(AttackDamage, DamageEvent, GetController(), this);
 	}
 
 	//충돌 감지 위한 영역을 씬에 표시 -> 조건부 컴파일
@@ -169,4 +182,28 @@ void AUPCharacterBase::AttackHitCheck()	//트레이스 채널 활용해 물체 충돌하는지 �
 
 	DrawDebugCapsule(GetWorld(), CapsuleOrigin, CapsuleHalfHeight, AttackRadius, FRotationMatrix::MakeFromZ(GetActorForwardVector()).ToQuat(), DrawColor, false, 5.0f);//z 방향으로 눕힘. 계속 그리지 않고 5초 동안 유지
 #endif
+}
+
+float AUPCharacterBase::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
+{
+	Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);//EventInstigator는 피해 입힌 가해자, DamageCauser는 가해자가 사용한 무기나 빙의한 액터 정보
+	
+	//죽는 모션 재생
+	SetDead();
+
+	return DamageAmount;//최종으로 액터가 받은 데미지 양
+}
+
+void AUPCharacterBase::SetDead()
+{
+	GetCharacterMovement()->SetMovementMode(EMovementMode::MOVE_None);
+	PlayDeadAnimation();
+	SetActorEnableCollision(false);
+}
+
+void AUPCharacterBase::PlayDeadAnimation()
+{
+	UAnimInstance* AnimInstance = GetMesh()->GetAnimInstance();
+	AnimInstance->StopAllMontages(0.0f);
+	AnimInstance->Montage_Play(DeadMontage, 1.0f);
 }
