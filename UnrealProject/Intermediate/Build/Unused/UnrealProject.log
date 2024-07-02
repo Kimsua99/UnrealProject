@@ -1,18 +1,19 @@
 ﻿  Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" UnrealProjectEditor Win64 Development -Project="F:\UnrealProject\UnrealProject\UnrealProject.uproject" -WaitMutex -FromMsBuild
   Log file: C:\Users\cjcha\AppData\Local\UnrealBuildTool\Log.txt
   Using 'git status' to determine working set for adaptive non-unity build (F:\UnrealProject).
+  Invalidating makefile for UnrealProjectEditor (UPCharacterBase.cpp.obj.response modified)
   Building UnrealProjectEditor...
   Using Visual Studio 2022 14.38.33133 toolchain (F:\VisualStudio\VC\Tools\MSVC\14.38.33130) and Windows 10.0.22621.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  [Adaptive Build] Excluded from UnrealProject unity file: UPCharacterBase.cpp, UPCharacterEnemy.cpp
+  [Adaptive Build] Excluded from UnrealProject unity file: UPCharacterBase.cpp
   Determining max actions to execute in parallel (4 physical cores, 8 logical cores)
     Requested 4 process count multiplier: limiting max parallel actions to 16
-    Requested 1.5 GB free memory per action, 6.76 GB available: limiting max parallel actions to 4
-  Building 4 actions with 4 processes...
+    Requested 1.5 GB free memory per action, 2.67 GB available: limiting max parallel actions to 1
+  Building 4 actions with 1 process...
   [1/4] Compile UPCharacterBase.cpp
-  [2/4] Link UnrealEditor-UnrealProject.lib
-     F:\UnrealProject\UnrealProject\Intermediate\Build\Win64\UnrealEditor\Development\UnrealProject\UnrealEditor-UnrealProject.lib 라이브러리 및 F:\UnrealProject\UnrealProject\Intermediate\Build\Win64\UnrealEditor\Development\UnrealProject\UnrealEditor-UnrealProject.exp 개체를 생성하고 있습니다.
-  [3/4] Link UnrealEditor-UnrealProject.dll
+  [2/4] Link UnrealEditor-UnrealProject.dll
      F:\UnrealProject\UnrealProject\Intermediate\Build\Win64\UnrealEditor\Development\UnrealProject\UnrealEditor-UnrealProject.suppressed.lib 라이브러리 및 F:\UnrealProject\UnrealProject\Intermediate\Build\Win64\UnrealEditor\Development\UnrealProject\UnrealEditor-UnrealProject.suppressed.exp 개체를 생성하고 있습니다.
+  [3/4] Link UnrealEditor-UnrealProject.lib
+     F:\UnrealProject\UnrealProject\Intermediate\Build\Win64\UnrealEditor\Development\UnrealProject\UnrealEditor-UnrealProject.lib 라이브러리 및 F:\UnrealProject\UnrealProject\Intermediate\Build\Win64\UnrealEditor\Development\UnrealProject\UnrealEditor-UnrealProject.exp 개체를 생성하고 있습니다.
   [4/4] WriteMetadata UnrealProjectEditor.target
-  Total time in Parallel executor: 315.10 seconds
-  Total execution time: 325.25 seconds
+  Total time in Parallel executor: 305.63 seconds
+  Total execution time: 330.61 seconds
