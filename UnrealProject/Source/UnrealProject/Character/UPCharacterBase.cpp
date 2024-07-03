@@ -152,7 +152,7 @@ void AUPCharacterBase::ComboCheck()//타이머 발동 시에 입력이 들어왔는지 아닌지 �
 
 void AUPCharacterBase::AttackHitCheck()	//트레이스 채널 활용해 물체 충돌하는지 검사하는 로직
 {	
-	FHitResult OutHitResult;//결과 값을 받아올 구조체
+	TArray<FHitResult> OutHitResult;//결과 값을 받아올 구조체
 
 	FCollisionQueryParams Params(SCENE_QUERY_STAT(Attack), false, this);//파라미터. (콜리전 분석 시 식별자 정보, 복잡한 충돌체도 감지 여부, 무시할 액터)
 
@@ -164,34 +164,45 @@ void AUPCharacterBase::AttackHitCheck()	//트레이스 채널 활용해 물체 충돌하는지 �
 	const FVector Start = GetActorLocation() + GetActorForwardVector() * GetCapsuleComponent()->GetScaledCapsuleRadius();
 	const FVector End = Start + GetActorForwardVector() * AttackRange;
 
-	bool HitDetected = GetWorld()->SweepSingleByChannel(OutHitResult, Start, End, FQuat::Identity, CCHANNEL_UPACTION,
-														FCollisionShape::MakeSphere(AttackRadius), Params);
+	bool HitDetected = GetWorld()->SweepMultiByChannel(OutHitResult, Start, End, FQuat::Identity, ECC_GameTraceChannel1,
+		FCollisionShape::MakeSphere(AttackRadius), Params);
 	//(결과값 구조체, 투사 시작지점, 투사 끝지점, 회전 사용 x, 전처리 설정한 트레이스 채널명, 구체 영역 지정(구체 반지름), 파라미터)
 	//충돌 감지되면 true 반환
+	UE_LOG(LogTemp, Log, TEXT("WW"));
 	if (HitDetected)
 	{
-		FDamageEvent DamageEvent;
-		OutHitResult.GetActor()->TakeDamage(AttackDamage, DamageEvent, GetController(), this);
+		for (FHitResult Enemy : OutHitResult)
+		{
+			if (Enemy.GetActor()->IsValidLowLevel())
+			{
+				//UE_LOG(LogTemp, Error, TEXT("Hit Actor Name : %s"), *OutHitResult.GetActor()->GetName());
+				FDamageEvent DamageEvent;
+
+				Enemy.GetActor()->TakeDamage(AttackDamage, DamageEvent, Controller, Controller->GetPawn());
+				//OutHitResult.GetActor()->TakeDamage(AttackDamage, DamageEvent, GetController(), this);
+			}
+		}
 	}
 
 	//충돌 감지 위한 영역을 씬에 표시 -> 조건부 컴파일
 #if ENABLE_DRAW_DEBUG
+
 	FVector CapsuleOrigin = Start + (End - Start) * 0.5f;
 	float CapsuleHalfHeight = AttackRange * 0.5f;
 	FColor DrawColor = HitDetected ? FColor::Green : FColor::Red;
 
-	DrawDebugCapsule(GetWorld(), CapsuleOrigin, CapsuleHalfHeight, AttackRadius, FRotationMatrix::MakeFromZ(GetActorForwardVector()).ToQuat(), DrawColor, false, 5.0f);//z 방향으로 눕힘. 계속 그리지 않고 5초 동안 유지
+	DrawDebugCapsule(GetWorld(), CapsuleOrigin, CapsuleHalfHeight, AttackRadius, FRotationMatrix::MakeFromZ(GetActorForwardVector()).ToQuat(), DrawColor, false, 5.0f);
+
 #endif
 }
 
 float AUPCharacterBase::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
 {
-	Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);//EventInstigator는 피해 입힌 가해자, DamageCauser는 가해자가 사용한 무기나 빙의한 액터 정보
-	
-	//죽는 모션 재생
+	Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
+
 	SetDead();
 
-	return DamageAmount;//최종으로 액터가 받은 데미지 양
+	return DamageAmount;
 }
 
 void AUPCharacterBase::SetDead()
