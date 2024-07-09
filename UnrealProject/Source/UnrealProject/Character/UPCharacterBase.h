@@ -38,12 +38,12 @@ protected:
 	FTimerHandle ComboTimerHandle;
 	bool HasNextComboCommand = false;
 
-	//Attack Hit Section
+	// Attack Hit Section
 protected:
-	virtual void AttackHitCheck() override;//인터페이스에 구현한 가상 함수 오버라이드
-	virtual float TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) override;
+	virtual void AttackHitCheck() override;
+	virtual float TakeDamage(float DamageAmount, struct FDamageEvent const& DamageEvent, class AController* EventInstigator, AActor* DamageCauser) override;
 
-	//Dead Section
+	// Dead Section
 protected:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Stat, Meta = (AllowPrivateAccess = "true"))
 	TObjectPtr<class UAnimMontage> DeadMontage;

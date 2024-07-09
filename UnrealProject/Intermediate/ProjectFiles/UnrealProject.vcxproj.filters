@@ -115,6 +115,15 @@
     <ClInclude Include="..\..\Source\UnrealProject\Character\UPComboActionData.h">
       <Filter>Source\UnrealProject\Character</Filter>
     </ClInclude>
+    <Filter Include="Source\UnrealProject\CharacterStat">
+      <UniqueIdentifier>{B591F845-479A-3F35-AE5D-8FB4AF3A4E57}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\UnrealProject\CharacterStat\UPCharacterStatComponent.cpp">
+      <Filter>Source\UnrealProject\CharacterStat</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\UnrealProject\CharacterStat\UPCharacterStatComponent.h">
+      <Filter>Source\UnrealProject\CharacterStat</Filter>
+    </ClInclude>
     <Filter Include="Source\UnrealProject\Game">
       <UniqueIdentifier>{A18EF023-4403-316C-86B2-B2BBB71D2D44}</UniqueIdentifier>
     </Filter>
