@@ -157,5 +157,26 @@
     <ClInclude Include="..\..\Source\UnrealProject\Player\UPPlayerController.h">
       <Filter>Source\UnrealProject\Player</Filter>
     </ClInclude>
+    <Filter Include="Source\UnrealProject\UI">
+      <UniqueIdentifier>{01E47407-D215-3060-BC79-BED5ED591EF5}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\UnrealProject\UI\UPHPBarWidget.cpp">
+      <Filter>Source\UnrealProject\UI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\UnrealProject\UI\UPHPBarWidget.h">
+      <Filter>Source\UnrealProject\UI</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\UnrealProject\UI\UPUserWidget.cpp">
+      <Filter>Source\UnrealProject\UI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\UnrealProject\UI\UPUserWidget.h">
+      <Filter>Source\UnrealProject\UI</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\UnrealProject\UI\UPWidgetComponent.cpp">
+      <Filter>Source\UnrealProject\UI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\UnrealProject\UI\UPWidgetComponent.h">
+      <Filter>Source\UnrealProject\UI</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

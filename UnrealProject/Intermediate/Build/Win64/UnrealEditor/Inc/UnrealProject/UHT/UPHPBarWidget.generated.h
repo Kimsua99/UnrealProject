@@ -51,8 +51,6 @@ public: \
 
 
 #define FID_UnrealProject_UnrealProject_Source_UnrealProject_UI_UPHPBarWidget_h_15_ENHANCED_CONSTRUCTORS \
-	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API UUPHPBarWidget(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API UUPHPBarWidget(UUPHPBarWidget&&); \

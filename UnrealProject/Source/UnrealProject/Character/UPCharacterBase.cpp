@@ -8,6 +8,8 @@
 #include "UPComboActionData.h"
 #include "Physics/UPCollision.h"
 #include "Engine/DamageEvents.h"
+#include "CharacterStat/UPCharacterStatComponent.h"
+#include "Components/WidgetComponent.h"
 
 // Sets default values
 AUPCharacterBase::AUPCharacterBase()
@@ -58,6 +60,24 @@ AUPCharacterBase::AUPCharacterBase()
 	if (DeadMontageRef.Object)
 		DeadMontage = DeadMontageRef.Object;
 
+	//Stat Component
+	Stat = CreateDefaultSubobject<UUPCharacterStatComponent>(TEXT("Stat"));
+
+	//Widget Component
+	HPBar = CreateDefaultSubobject<UWidgetComponent>(TEXT("Widget"));
+
+	HPBar->SetupAttachment(GetMesh());
+	HPBar->SetRelativeLocation(FVector(0.0f, 0.0f, 180.0f));
+
+	static ConstructorHelpers::FClassFinder<UUserWidget>HPBarWidgetRef(TEXT("/Game/UI/WBP_HPBar.WBP_HPBar_C"));
+
+	if (HPBarWidgetRef.Class)
+	{
+		HPBar->SetWidgetClass(HPBarWidgetRef.Class);
+		HPBar->SetWidgetSpace(EWidgetSpace::Screen);
+		HPBar->SetDrawSize(FVector2D(150.0f, 15.0f));
+		HPBar->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	}
 }
 
 void AUPCharacterBase::PressComboCommand()
