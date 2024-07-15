@@ -1,19 +1,33 @@
 ﻿  Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" UnrealProjectEditor Win64 Development -Project="F:\UnrealProject\UnrealProject\UnrealProject.uproject" -WaitMutex -FromMsBuild
   Log file: C:\Users\cjcha\AppData\Local\UnrealBuildTool\Log.txt
   Using 'git status' to determine working set for adaptive non-unity build (F:\UnrealProject).
-  Invalidating makefile for UnrealProjectEditor (UPCharacterBase.cpp.obj.response modified)
+  Invalidating makefile for UnrealProjectEditor (UPHPBarWidget.cpp.obj.response modified)
   Building UnrealProjectEditor...
   Using Visual Studio 2022 14.38.33133 toolchain (F:\VisualStudio\VC\Tools\MSVC\14.38.33130) and Windows 10.0.22621.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  [Adaptive Build] Excluded from UnrealProject unity file: UPCharacterBase.cpp, UPCharacterStatComponent.cpp, UPHPBarWidget.cpp
+  [Adaptive Build] Excluded from UnrealProject unity file: UPCharacterBase.cpp, UPCharacterWidgetInterface.cpp, UPHPBarWidget.cpp, UPUserWidget.cpp, UPWidgetComponent.cpp
   Determining max actions to execute in parallel (4 physical cores, 8 logical cores)
     Requested 4 process count multiplier: limiting max parallel actions to 16
-    Requested 1.5 GB free memory per action, 4.25 GB available: limiting max parallel actions to 2
-  Building 4 actions with 2 processes...
-  [1/4] Compile UPCharacterBase.cpp
-  [2/4] Link UnrealEditor-UnrealProject.lib
+    Requested 1.5 GB free memory per action, 7.39 GB available: limiting max parallel actions to 4
+  Building 18 actions with 4 processes...
+  [1/18] Compile UPCharacterWidgetInterface.gen.cpp
+  [2/18] Compile UPCharacterEnemy.gen.cpp
+  [3/18] Compile UPCharacterEnemy.cpp
+  [4/18] Compile UnrealProject.init.gen.cpp
+  [5/18] Compile UPCharacterWidgetInterface.cpp
+  [6/18] Compile UPUserWidget.cpp
+  [7/18] Compile UPHPBarWidget.cpp
+  [8/18] Compile UPCharacterBase.gen.cpp
+  [9/18] Compile UPHPBarWidget.gen.cpp
+  [10/18] Compile UPWidgetComponent.gen.cpp
+  [11/18] Compile UPCharacterBase.cpp
+  [12/18] Compile UPCharacterPlayer.gen.cpp
+  [13/18] Compile UPUserWidget.gen.cpp
+  [14/18] Compile UPWidgetComponent.cpp
+  [15/18] Compile UPCharacterPlayer.cpp
+  [16/18] Link UnrealEditor-UnrealProject.lib
      F:\UnrealProject\UnrealProject\Intermediate\Build\Win64\UnrealEditor\Development\UnrealProject\UnrealEditor-UnrealProject.lib 라이브러리 및 F:\UnrealProject\UnrealProject\Intermediate\Build\Win64\UnrealEditor\Development\UnrealProject\UnrealEditor-UnrealProject.exp 개체를 생성하고 있습니다.
-  [3/4] Link UnrealEditor-UnrealProject.dll
+  [17/18] Link UnrealEditor-UnrealProject.dll
      F:\UnrealProject\UnrealProject\Intermediate\Build\Win64\UnrealEditor\Development\UnrealProject\UnrealEditor-UnrealProject.suppressed.lib 라이브러리 및 F:\UnrealProject\UnrealProject\Intermediate\Build\Win64\UnrealEditor\Development\UnrealProject\UnrealEditor-UnrealProject.suppressed.exp 개체를 생성하고 있습니다.
-  [4/4] WriteMetadata UnrealProjectEditor.target
-  Total time in Parallel executor: 277.32 seconds
-  Total execution time: 280.36 seconds
+  [18/18] WriteMetadata UnrealProjectEditor.target
+  Total time in Parallel executor: 128.97 seconds
+  Total execution time: 131.01 seconds

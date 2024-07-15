@@ -23,7 +23,7 @@ private: \
 	static void StaticRegisterNativesUUPHPBarWidget(); \
 	friend struct Z_Construct_UClass_UUPHPBarWidget_Statics; \
 public: \
-	DECLARE_CLASS(UUPHPBarWidget, UUserWidget, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/UnrealProject"), NO_API) \
+	DECLARE_CLASS(UUPHPBarWidget, UUPUserWidget, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/UnrealProject"), NO_API) \
 	DECLARE_SERIALIZER(UUPHPBarWidget)
 
 
@@ -32,7 +32,7 @@ private: \
 	static void StaticRegisterNativesUUPHPBarWidget(); \
 	friend struct Z_Construct_UClass_UUPHPBarWidget_Statics; \
 public: \
-	DECLARE_CLASS(UUPHPBarWidget, UUserWidget, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/UnrealProject"), NO_API) \
+	DECLARE_CLASS(UUPHPBarWidget, UUPUserWidget, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/UnrealProject"), NO_API) \
 	DECLARE_SERIALIZER(UUPHPBarWidget)
 
 

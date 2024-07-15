@@ -13,5 +13,11 @@ UCLASS()
 class UNREALPROJECT_API UUPUserWidget : public UUserWidget
 {
 	GENERATED_BODY()
+
+public:
+	FORCEINLINE void SetOwningActor(AActor* NewOwner) { OwningActor = NewOwner; }
+protected:
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Actor")
+	TObjectPtr<AActor>OwningActor;
 	
 };

@@ -3,6 +3,7 @@
 
 #include "UI/UPHPBarWidget.h"
 #include "Components/ProgressBar.h"
+#include "Interface/UPCharacterWidgetInterface.h"
 
 
 UUPHPBarWidget::UUPHPBarWidget(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer)
@@ -12,10 +13,17 @@ UUPHPBarWidget::UUPHPBarWidget(const FObjectInitializer& ObjectInitializer) : Su
 
 void UUPHPBarWidget::NativeConstruct()
 {
-	Super::NativeConstruct();//이 함수가 호출되면 UI에 관련된 모든 기능들이 초기화 완료된 상태
+	Super::NativeConstruct();
 
-	HpProgressBar = Cast<UProgressBar>(GetWidgetFromName(TEXT("PbHpBar")));//지정한 컨트롤에 대해 프로그레스 바를 이름으로 찾음
+	HpProgressBar = Cast<UProgressBar>(GetWidgetFromName(TEXT("PbHPBar")));
 	ensure(HpProgressBar);
+
+	IUPCharacterWidgetInterface* CharacterWidget = Cast<IUPCharacterWidgetInterface>(OwningActor);
+
+	if (CharacterWidget)
+	{
+		CharacterWidget->SetUpCharacterWidget(this);
+	}
 }
 
 void UUPHPBarWidget::UpdateHpBar(float NewCurrentHp)

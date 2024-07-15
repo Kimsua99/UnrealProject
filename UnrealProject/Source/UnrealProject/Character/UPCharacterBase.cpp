@@ -9,7 +9,8 @@
 #include "Physics/UPCollision.h"
 #include "Engine/DamageEvents.h"
 #include "CharacterStat/UPCharacterStatComponent.h"
-#include "Components/WidgetComponent.h"
+#include "UI/UPWidgetComponent.h"
+#include "UI/UPHPBarWidget.h"
 
 // Sets default values
 AUPCharacterBase::AUPCharacterBase()
@@ -64,7 +65,7 @@ AUPCharacterBase::AUPCharacterBase()
 	Stat = CreateDefaultSubobject<UUPCharacterStatComponent>(TEXT("Stat"));
 
 	//Widget Component
-	HPBar = CreateDefaultSubobject<UWidgetComponent>(TEXT("Widget"));
+	HPBar = CreateDefaultSubobject<UUPWidgetComponent>(TEXT("Widget"));
 
 	HPBar->SetupAttachment(GetMesh());
 	HPBar->SetRelativeLocation(FVector(0.0f, 0.0f, 180.0f));
@@ -78,6 +79,13 @@ AUPCharacterBase::AUPCharacterBase()
 		HPBar->SetDrawSize(FVector2D(150.0f, 15.0f));
 		HPBar->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 	}
+}
+
+void AUPCharacterBase::PostInitializeComponents()
+{
+	Super::PostInitializeComponents();
+
+	Stat->OnHPZero.AddUObject(this, &AUPCharacterBase::SetDead);
 }
 
 void AUPCharacterBase::PressComboCommand()
@@ -220,7 +228,7 @@ float AUPCharacterBase::TakeDamage(float DamageAmount, FDamageEvent const& Damag
 {
 	Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
 
-	SetDead();
+	Stat->ApplyDamage(DamageAmount);
 
 	return DamageAmount;
 }
@@ -230,6 +238,7 @@ void AUPCharacterBase::SetDead()
 	GetCharacterMovement()->SetMovementMode(EMovementMode::MOVE_None);
 	PlayDeadAnimation();
 	SetActorEnableCollision(false);
+	HPBar->SetHiddenInGame(true);
 }
 
 void AUPCharacterBase::PlayDeadAnimation()
@@ -237,4 +246,16 @@ void AUPCharacterBase::PlayDeadAnimation()
 	UAnimInstance* AnimInstance = GetMesh()->GetAnimInstance();
 	AnimInstance->StopAllMontages(0.0f);
 	AnimInstance->Montage_Play(DeadMontage, 1.0f);
+}
+
+void AUPCharacterBase::SetUpCharacterWidget(UUPUserWidget* InUserWidget)
+{
+	UUPHPBarWidget* HPBarWidget = Cast<UUPHPBarWidget>(InUserWidget);
+
+	if (HPBarWidget)
+	{
+		HPBarWidget->SetMaxHp(Stat->GetMaxHP());
+		HPBarWidget->UpdateHpBar(Stat->GetCurrentHP());
+		Stat->OnHPChanged.AddUObject(HPBarWidget, &UUPHPBarWidget::UpdateHpBar);
+	}
 }

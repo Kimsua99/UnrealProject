@@ -5,16 +5,19 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "Interface/UPAnimationAttackInterface.h"
+#include "Interface/UPCharacterWidgetInterface.h"
 #include "UPCharacterBase.generated.h"
 
 UCLASS()
-class UNREALPROJECT_API AUPCharacterBase : public ACharacter, public IUPAnimationAttackInterface
+class UNREALPROJECT_API AUPCharacterBase : public ACharacter, public IUPAnimationAttackInterface, public IUPCharacterWidgetInterface
 {
 	GENERATED_BODY()
 
 public:
 	// Sets default values for this character's properties
 	AUPCharacterBase();
+
+	virtual void PostInitializeComponents() override;
 
 //Combo Action Section
 protected:
@@ -60,7 +63,8 @@ protected:
 
 	//UI Widget Section
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Widget, meta = (AllowPrivateAccess = "true"))
-	TObjectPtr<class UWidgetComponent> HPBar;
+	TObjectPtr<class UUPWidgetComponent> HPBar;
 	
+	virtual void SetUpCharacterWidget(class UUPUserWidget* InUserWidget) override;
 
 };

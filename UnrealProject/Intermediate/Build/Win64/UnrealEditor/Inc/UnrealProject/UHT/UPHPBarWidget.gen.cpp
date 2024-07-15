@@ -10,9 +10,9 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeUPHPBarWidget() {}
 // Cross Module References
 	UMG_API UClass* Z_Construct_UClass_UProgressBar_NoRegister();
-	UMG_API UClass* Z_Construct_UClass_UUserWidget();
 	UNREALPROJECT_API UClass* Z_Construct_UClass_UUPHPBarWidget();
 	UNREALPROJECT_API UClass* Z_Construct_UClass_UUPHPBarWidget_NoRegister();
+	UNREALPROJECT_API UClass* Z_Construct_UClass_UUPUserWidget();
 	UPackage* Z_Construct_UPackage__Script_UnrealProject();
 // End Cross Module References
 	void UUPHPBarWidget::StaticRegisterNativesUUPHPBarWidget()
@@ -42,7 +42,7 @@ void EmptyLinkFunctionForGeneratedCodeUPHPBarWidget() {}
 		static const UECodeGen_Private::FClassParams ClassParams;
 	};
 	UObject* (*const Z_Construct_UClass_UUPHPBarWidget_Statics::DependentSingletons[])() = {
-		(UObject* (*)())Z_Construct_UClass_UUserWidget,
+		(UObject* (*)())Z_Construct_UClass_UUPUserWidget,
 		(UObject* (*)())Z_Construct_UPackage__Script_UnrealProject,
 	};
 #if WITH_METADATA
@@ -109,9 +109,9 @@ void EmptyLinkFunctionForGeneratedCodeUPHPBarWidget() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UnrealProject_UnrealProject_Source_UnrealProject_UI_UPHPBarWidget_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UUPHPBarWidget, UUPHPBarWidget::StaticClass, TEXT("UUPHPBarWidget"), &Z_Registration_Info_UClass_UUPHPBarWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UUPHPBarWidget), 2233125718U) },
+		{ Z_Construct_UClass_UUPHPBarWidget, UUPHPBarWidget::StaticClass, TEXT("UUPHPBarWidget"), &Z_Registration_Info_UClass_UUPHPBarWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UUPHPBarWidget), 1947664281U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UnrealProject_UnrealProject_Source_UnrealProject_UI_UPHPBarWidget_h_2972395314(TEXT("/Script/UnrealProject"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UnrealProject_UnrealProject_Source_UnrealProject_UI_UPHPBarWidget_h_715855975(TEXT("/Script/UnrealProject"),
 		Z_CompiledInDeferFile_FID_UnrealProject_UnrealProject_Source_UnrealProject_UI_UPHPBarWidget_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UnrealProject_UnrealProject_Source_UnrealProject_UI_UPHPBarWidget_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

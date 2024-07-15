@@ -3,14 +3,14 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Blueprint/UserWidget.h"
+#include "UPUserWidget.h"
 #include "UPHPBarWidget.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class UNREALPROJECT_API UUPHPBarWidget : public UUserWidget
+class UNREALPROJECT_API UUPHPBarWidget : public UUPUserWidget
 {
 	GENERATED_BODY()
 
@@ -19,7 +19,7 @@ public:
 
 protected:
 	//위젯이 초기화될 때 HpProgressBar를 가져와서 포인터를 가져오는 기능 추가.
-	virtual void NativeConstruct() override;//부모 함수 오버라이드
+	virtual void NativeConstruct() override;
 
 public:
 	FORCEINLINE void SetMaxHp(float NewMaxHp) { MaxHp = NewMaxHp; }
