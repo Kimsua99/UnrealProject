@@ -14,4 +14,6 @@ class UNREALPROJECT_API UUPWidgetComponent : public UWidgetComponent
 {
 	GENERATED_BODY()
 	
+protected:
+	virtual void InitWidget() override;
 };
