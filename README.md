@@ -14,7 +14,7 @@
 
 |  | 내용 | 상세 설명 | 완료 여부 | 개발 블로그 |
 | --- | --- | --- | --- | --- |
-| 1 | 캐릭터 모델 변경 | Mixamo를 사용해 Third Person Controller에 해당하는 모델 변경. | 완료 | https://tndk0226.tistory.com/5https://tndk0226.tistory.com/6 |
+| 1 | 캐릭터 모델 변경 | Mixamo를 사용해 Third Person Controller에 해당하는 모델 변경. | 완료 | https://tndk0226.tistory.com/5 https://tndk0226.tistory.com/6 |
 | 2 | 캐릭터 애니메이션 변경 | Idle, Walk, Move, Run, Roll, Jump, Land에 해당하는 플레이어 기본 모션 애니메이션 변경. 캐릭터 리타겟팅 요구. | 완료 |  |
 | 3 | 캐릭터 콤보 액션 설정 | 플레이어 콤보 액션에 필요한 공격 애니메이션 세팅. | 완료 |  |
 | 4 | 적 캐릭터 투입 및 캐릭터 공격 판정 | Enemy 모델 세팅, 리타겟팅. 콤보 액션에 따른 피격 판정 구현 | 완료 |  |
